@@ -1,0 +1,27 @@
+<h2>page weather component html</h2>
+
+<h2>Météo pour la ville</h2>
+
+ 
+
+<div *ngIf="weatherData.length">
+  <h3>{{ weatherData[0] }}</h3>
+  <ul>
+    <li *ngFor="let item of weatherData.slice(1)">
+      <ng-container *ngIf="item.includes('Image : ')">
+        <span>{{ item.split(', Image : ')[0] }}</span>
+        <img [src]="item.split(', Image : ')[1]" alt="Weather Icon">
+      </ng-container>
+      <ng-container *ngIf="!item.includes('Image : ')">
+        {{ item }}
+      </ng-container>
+    </li>
+  </ul>
+</div>
+
+<!-- <h2>API Data</h2> -->
+<!-- <pre>{{ apiData | json }}</pre> -->
+<!-- <h2>Weather Data</h2> -->
+
+
+

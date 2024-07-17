@@ -1,0 +1,25 @@
+body{
+  padding-top:66px;
+}
+.navbar{
+  background-color: #e3f2fd;
+}
+
+.footer{
+  margin-top:100px;
+}
+
+#header{
+  color:aliceblue;
+  height:200px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  
+}
+  .router-link {
+    cursor: pointer;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }

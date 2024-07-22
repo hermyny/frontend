@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   })
 export class WeatherService {
 
-    private apiUrl = 'http://localhost:8080'; // URL de votre API Spring Boot
+    private apiUrl = 'http://localhost:8080/api'; // URL de votre API Spring Boot
     private weatherData: any;
 
     constructor(private http: HttpClient) { 
@@ -41,6 +41,10 @@ export class WeatherService {
         'Content-Type': 'application/json',
       });
       return this.http.get<Map<string, number[]>>(`${this.apiUrl}/callapidate`);
+    }
+
+    getWeatherByCity(city: string): Observable<any> {
+      return this.http.get<any>(`${this.apiUrl}/weatherTown?city=${city}`);
     }
     
 }

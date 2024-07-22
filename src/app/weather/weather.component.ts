@@ -15,12 +15,12 @@ export class WeatherComponent implements OnInit{
 
   constructor(private weatherService: WeatherService) { }
 
+  
+   
+
   ngOnInit(): void {
    
-    // this.weatherService.getApi().subscribe(data => {
-    //   this.apiData = data;
-    //   console.log("this.apiData: ", JSON.stringify(this.apiData, null, 2));
-    // });
+  
 
     this.weatherService.getWeather().subscribe(data => {
         this.weatherData = data;
